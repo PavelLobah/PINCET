@@ -772,7 +772,7 @@ body.ie .ibg img {
       -ms-flex-direction: column;
           flex-direction: column;
   text-align: center;
-  background: url("../../img/popup/Фон_копия_5.png") 0 0/cover no-repeat;
+  background: url("../img/popup/Фон_копия_5.png") 0 0/cover no-repeat;
   color: #000;
   max-width: 40vw;
   padding: 3vw;
@@ -799,7 +799,7 @@ body.ie .ibg img {
 }
 
 .popup__close {
-  background: url("../../img/popup/cancel-music_копия_3.png");
+  background: url("../img/popup/cancel-music_копия_3.png");
   position: absolute;
   right: 10px;
   top: 10px;
@@ -893,7 +893,7 @@ body.ie .ibg img {
   right: 0px;
   width: 45px;
   height: 100%;
-  background: url("../../img/popup/Стрелка.png") center no-repeat;
+  background: url("../img/popup/Стрелка.png") center no-repeat;
 }
 .select .select-title__value {
   color: #989797;
