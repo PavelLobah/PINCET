@@ -1,0 +1,380 @@
+//====================================================================================================
+
+//====================================================================================================
+/*
+	Стиль иконки бургера
+	.icon-menu{
+		display: block;
+		position: absolute;
+		top: 18px;
+		right: 10px;
+		width:30px;
+		height: 18px;
+		cursor: pointer;
+		z-index: 5;
+		span{@include anim(0.3s,0s);top: 8px;left: 0px;position: absolute;width: 100%;height: 2px;background-color: #000;
+			&:first-child{top: 0px;}
+			&:last-child{top: auto;bottom: 0px;}
+		}
+		&.active{
+			span{@include scale(0);
+				&:first-child{@include rotate(-45deg);top: 8px;}
+				&:last-child{@include rotate(45deg);bottom: 8px;}
+			}
+		}
+	}
+*/
+
+.header {
+   background: url("../img/01.png") 0 0 / cover no-repeat;
+   z-index: 10;
+   position: relative;
+
+   padding: 32px 0px 0px 0px;
+   @media (max-width: $md2+px) {
+      padding: 5px 0px 5px 0px;
+   }
+}
+.container {
+}
+.header-top {
+   height: 126px;
+   @include flexbox();
+   margin: 1.5%;
+}
+.header-top-logo {
+   align-self: center;
+   flex: 0 0 17%;
+   margin: 0px 2% 0px 0px;
+   &__image {
+      // padding: 0px 0px 50% 0px;
+      // overflow: hidden;
+      // position: relative;
+      & img {
+         max-width: 100%;
+         // width: 100%;
+         // height: 100%;
+         // object-fit: cover;
+         // position: absolute;
+         // top: 0;
+         // left: 0;
+      }
+   }
+}
+.header-top-text {
+   margin: 0px 5% 0px 0px;
+   flex: 0 0 13%;
+   align-self: center;
+   color: #282828;
+   font-family: "Museo Sans Cyrl -300";
+   font-size: 14px;
+   font-weight: 400;
+   letter-spacing: 0.7px;
+}
+.header-top-minicart {
+   flex: 0 0 25%;
+   align-self: center;
+   @include flexbox();
+   &__column {
+      @include flexbox();
+   }
+
+   &__image {
+      flex: 0 0 78px;
+   }
+
+   &__text {
+      flex: 1 1 auto;
+      display: flex;
+      flex-direction: column;
+      align-self: center;
+      text-align: left;
+      color: #282828;
+      font-size: 16px;
+      &_row1 {
+         font-family: "Museo Sans Cyrl -700";
+         letter-spacing: 0.8px;
+         line-height: 18px;
+      }
+
+      &_row2 {
+         letter-spacing: 0.8px;
+         line-height: 21px;
+      }
+   }
+
+   &__link {
+      color: #ff6078;
+
+      border-bottom: 1px solid;
+      font-family: "Museo Sans Cyrl -500";
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 0.01px;
+      text-transform: uppercase;
+      /* Text style for "Смотреть н" */
+      letter-spacing: 1.2px;
+   }
+}
+.header-top-contakt {
+   flex: 0 0 20%;
+   align-self: center;
+   &__row {
+      @include flexbox();
+   }
+
+   &__image {
+      align-self: center;
+   }
+   &__content {
+      @include flexbox();
+      align-self: center;
+      flex-direction: column;
+   }
+   &__text {
+      color: #282828;
+      font-family: "Museo Sans Cyrl -500";
+      font-size: 12px;
+      font-weight: 400;
+      /* Text style for "Звоните, м" */
+      letter-spacing: 0.96px;
+   }
+
+   &__num {
+      color: #282828;
+      font-family: "Museo Sans Cyrl -500";
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 18px;
+      /* Text style for "+375 33 38" */
+      letter-spacing: 0.6px;
+   }
+
+   &__graphik {
+      align-self: center;
+      color: #282828;
+      font-size: 16px;
+      line-height: 21px;
+      font-family: "Museo Sans Cyrl -700";
+      letter-spacing: 0.8px;
+   }
+}
+.header-top-button {
+   flex: 0 0 20%;
+   align-self: center;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.header-bottom {
+   height: 60px;
+   border-radius: 5px;
+   background-color: #ffffff;
+   @include flexbox();
+   text-align: center;
+}
+.header-bottom-menu {
+   width: 100%;
+   align-self: center;
+
+   a {
+   }
+   &__link {
+      color: #282828;
+
+      font-size: 15px;
+      font-weight: 400;
+
+      letter-spacing: 0.75px;
+      &_main {
+         /* Text style for "Главная" */
+         font-family: "Museo Sans Cyrl -700";
+      }
+   }
+}
+.header-bottom-menu-list {
+   @include flexbox();
+   justify-content: space-evenly;
+   // justify-content: space-between;
+}
+.header-body {
+   max-width: 75vw;
+   margin: 5vh auto;
+   @include flexbox();
+   &__column {
+      &_1 {
+         flex: 0 0 60%;
+         margin-bottom: 5vw;
+      }
+      &_2 {
+         flex: 0 0 40%;
+         align-self: center;
+      }
+   }
+}
+.header-body-left {
+   &__title {
+      & p:nth-child(2n) {
+         font-family: "Museo Sans Cyrl -700";
+      }
+      color: #282828;
+
+      font-size: 48px;
+      font-weight: 400;
+      line-height: 55px;
+      margin: 0px 0px 3vh 0px;
+   }
+
+   &__container {
+      @include flexbox();
+      justify-content: space-between;
+   }
+
+   &__column {
+   }
+}
+.header-body-left-list {
+   margin: 0px 0px 7vh 0px;
+   &__item {
+      color: #282828;
+      font-family: "Museo Sans Cyrl -300";
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 36px;
+      /* Text style for "депиляция" */
+      letter-spacing: 0.45px;
+      &::before {
+         content: " ";
+         width: 17px;
+         height: 17px;
+         box-shadow: 0 1px 13px rgba(239, 148, 153, 0.38);
+         border: 4px solid #f7f7fb;
+         background-color: #ef9499;
+         display: inline-block;
+         border-radius: 50%;
+         margin: 0px 10px 0px 0px;
+      }
+   }
+}
+.header-img {
+   &__main {
+      position: absolute;
+      width: 35vw;
+      z-index: 2;
+      right: 0;
+      bottom: 0;
+   }
+   &__tochka {
+      position: absolute;
+      left: 55%;
+      bottom: 10%;
+      z-index: 2;
+   }
+   &__patno1 {
+      position: absolute;
+      right: -5%;
+      top: 18%;
+      z-index: -1;
+   }
+   &__patno2 {
+      position: absolute;
+      left: 8%;
+      top: 30%;
+      z-index: -1;
+   }
+   &__bottom {
+      width: 100vw;
+      position: absolute;
+      z-index: 5;
+      bottom: -5vw;
+   }
+}
+
+.button {
+   display: inline-block;
+
+   user-select: none; /* Убираем текстовое выделение */
+   text-decoration: none; /* Убираем подчеркивание */
+   outline: none; /* Убираем контур вокруг ссылки */
+   text-align: center;
+   padding: 25px 25px; /* Отступ от текста до рамки */
+   color: #1f1d1d;
+   font-family: "Museo Sans Cyrl -500";
+   font-size: 15px;
+   font-weight: 400;
+   line-height: 24px;
+   /* Text style for "Записаться" */
+   letter-spacing: 0.75px;
+
+   border-radius: 30px;
+   background-color: #fefcfb;
+
+   &:hover {
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1), 0px 0px 4px rgba(0, 0, 0, 0.15);
+   }
+   &:active {
+      background-color: #fefcfb;
+   }
+   &_but {
+      display: flex;
+      align-items: center;
+
+      &::after {
+         display: block;
+         content: " ";
+         content: url("../../img/Branch.png");
+         position: relative;
+         // top: 30px;
+         left: 18%;
+      }
+      text-shadow: 0 1px 5px rgba(210, 110, 116, 0.49);
+      color: #ffffff;
+      font-family: "Museo Sans Cyrl -700";
+      font-size: 14px;
+      font-weight: 400;
+      text-transform: uppercase;
+      /* Text style for "ПОЛУЧИТЬ К" */
+      letter-spacing: 1.68px;
+      padding: 25px 0 25px 25px;
+      box-shadow: 0 7px 27px rgba(241, 131, 131, 0.57);
+      border-radius: 70px;
+      background-color: #d7747a;
+      background-image: linear-gradient(
+         to top,
+         rgba(241, 153, 157, 0.47) 0%,
+         rgba(252, 182, 182, 0.99) 98%,
+         #fcb6b6 100%
+      );
+   }
+   &_pop {
+      display: flex;
+      align-items: center;
+
+      &::after {
+         display: block;
+         content: " ";
+         content: url("../../img/popup/Plant.png");
+         position: relative;
+         // top: 30px;
+         left: 10%;
+      }
+      text-shadow: 0 1px 5px rgba(210, 110, 116, 0.49);
+      color: #ffffff;
+      font-family: "Museo Sans Cyrl -700";
+      font-size: 14px;
+      font-weight: 400;
+      text-transform: uppercase;
+      /* Text style for "ПОЛУЧИТЬ К" */
+      letter-spacing: 1.68px;
+      padding: 25px 0 25px 25px;
+      box-shadow: 0 7px 27px rgba(241, 131, 131, 0.57);
+      border-radius: 70px;
+      background-color: #d7747a;
+      background-image: linear-gradient(
+         to top,
+         rgba(241, 153, 157, 0.47) 0%,
+         rgba(252, 182, 182, 0.99) 98%,
+         #fcb6b6 100%
+      );
+   }
+}

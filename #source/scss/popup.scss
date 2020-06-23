@@ -1,0 +1,243 @@
+.popup {
+   position: fixed;
+   width: 100%;
+   height: 100%;
+   background-color: rgba(0, 0, 0, 0.8);
+   top: 0;
+   left: 0;
+   opacity: 0;
+   visibility: hidden;
+   overflow-y: auto;
+   overflow-x: hidden;
+   transition: all 0.8s ease 0s;
+   z-index: 100;
+}
+.popup.open {
+   opacity: 1;
+   visibility: visible;
+}
+.popup.open .popup__content {
+   transform: perspective(600px) translate(0px, 0%) rotateX(0deg);
+   opacity: 1;
+}
+
+.popup__area {
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   top: 0;
+   left: 0;
+}
+
+.popup__body {
+   min-height: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   padding: 30px 10px;
+   transition: all 0.8s ease 0s;
+}
+.popup__content {
+   &_mini {
+      max-width: 25vw;
+   }
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+   text-align: center;
+   background: url("../../img/popup/Фон_копия_5.png") 0 0 / cover no-repeat;
+   color: #000;
+   max-width: 40vw;
+   padding: 3vw;
+   position: relative;
+   transition: all 0.8s ease 0s;
+   opacity: 0;
+   transform: perspective(600px) translate(0px, -100%) rotateX(45deg);
+   border-radius: 5vw;
+}
+.popup__content_image {
+   padding: 0;
+}
+.popup__image img {
+   max-width: 100%;
+   vertical-align: top;
+}
+
+.popup__close {
+   background: url("../../img/popup/cancel-music_копия_3.png");
+   position: absolute;
+   right: 10px;
+   top: 10px;
+   font-size: 20px;
+   color: #000;
+   text-decoration: none;
+}
+.popup__title {
+   font-size: 36px;
+
+   &::first-letter {
+      font-weight: bold;
+   }
+}
+.popup__text {
+   color: #282828;
+   font-family: "Museo Sans Cyrl -300";
+   font-size: 16px;
+   font-weight: 400;
+   /* Text style for "Lorem ipsu" */
+   letter-spacing: 0.4px;
+   padding: 2.5vw;
+}
+.popup-img {
+   &__book {
+      position: absolute;
+      width: 20vw;
+      z-index: -1;
+      left: -5vw;
+      bottom: 5vw;
+   }
+   &__ok {
+      width: 8vw;
+      z-index: 2;
+      left: 50%;
+      bottom: 50%;
+   }
+   &__lepest1 {
+      position: absolute;
+      width: 3.5vw;
+      z-index: 2;
+      right: 0;
+      bottom: 25%;
+   }
+   &__lepest2 {
+      position: absolute;
+      width: 3.5vw;
+      z-index: 2;
+      right: 0;
+      bottom: 15%;
+   }
+}
+
+//<SELECT (sel+tab)>====================================================================================================
+.select-block {
+   position: relative;
+}
+.select__label {
+   z-index: 2;
+   position: absolute;
+   top: -8px;
+   background-color: #f7f7f7;
+   padding: 0 5px;
+   color: #979797;
+   font-weight: 600;
+   font-size: 13px;
+   line-height: 16px;
+   left: 20px;
+}
+.select {
+   position: relative;
+   cursor: pointer;
+   .select-title {
+      z-index: 1;
+      width: 100%;
+      height: 4vw;
+      border-radius: 3vw;
+      border: 1px solid #fbeeef;
+      background-color: #ffffff;
+      @include flexbox;
+      margin-bottom: 2vw;
+   }
+   .select-title__arrow {
+      position: absolute;
+      top: 0;
+      right: 0px;
+      width: 45px;
+      height: 100%;
+      background: url("../../img/popup/Стрелка.png") center no-repeat;
+   }
+   .select-title__value {
+      color: #989797;
+      font-family: "Museo Sans Cyrl -300";
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 24px;
+      /* Text style for "Повыешенми" */
+      letter-spacing: 0.45px;
+      display: block;
+      overflow: hidden;
+      padding: 0 45px 0 25px;
+      white-space: nowrap;
+      text-transform: none;
+      text-overflow: ellipsis;
+
+      text-align: left;
+      align-self: center;
+   }
+   .select-options {
+      position: absolute;
+      z-index: 10;
+      top: 54px;
+      display: none;
+      overflow: hidden;
+      min-width: 100%;
+      background-color: #fff;
+      border: 1px solid #dedede;
+      padding: 10px 20px 10px 25px;
+   }
+   .select-options-scroll {
+      max-height: 80px;
+      overflow: auto;
+   }
+   .select-options-list {
+      padding: 0px 0px 0px 0px;
+   }
+   .select-options__value {
+      color: #000;
+      font-size: 20px;
+      margin: 0px 0px 15px 0px;
+      &:last-child {
+         margin: 0px 0px 0px 0px;
+      }
+      &:hover {
+         color: #000;
+      }
+   }
+}
+//</SELECT>====================================================================================================
+
+//<INPUT (inp+tab)>====================================================================================================
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+   -webkit-appearance: none;
+   -moz-appearance: none;
+   appearance: none;
+}
+.input {
+   border-radius: 40px;
+   border: 1px solid #fbeeef;
+   background-color: #ffffff;
+   height: 4vw;
+   margin: 0px 0px 2vw 0px;
+   width: 100%;
+   display: block;
+   padding: 0px 1.5vw;
+   color: #989797;
+   font-family: "Museo Sans Cyrl -300";
+   font-size: 18px;
+   font-weight: 400;
+   line-height: 24px;
+   /* Text style for "Ваше имя" */
+   letter-spacing: 0.45px;
+   &.focus {
+   }
+   &.err {
+   }
+}
+textarea.input {
+   resize: none;
+   padding: 0px 0px;
+}
+//</INPUT>====================================================================================================
