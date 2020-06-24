@@ -1379,7 +1379,7 @@ textarea.input {
 .button_but::after {
   display: block;
   content: " ";
-  content: url("../../img/Branch.png");
+  content: url("../img/Branch.png");
   position: relative;
   left: 18%;
 }
@@ -1410,7 +1410,7 @@ textarea.input {
 .button_pop::after {
   display: block;
   content: " ";
-  content: url("../../img/popup/Plant.png");
+  content: url("../img/popup/Plant.png");
   position: relative;
   left: 10%;
 }
